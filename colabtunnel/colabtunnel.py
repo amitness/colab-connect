@@ -2,6 +2,8 @@ from pathlib import Path
 import subprocess
 from importlib import import_module
 import time
+import sys
+
 
 message = """
 - Ready!
@@ -39,18 +41,21 @@ def run(command: str) -> None:
     if process.returncode == 0:
         print(f"Ran: {command}")
 
+def is_colab():
+    return 'google.colab' in sys.modules
 
 def colabtunnel() -> None:
-    print("Mounting Google Drive...")
-    drive = import_module("google.colab.drive")
-    drive.mount("/content/drive")
+    if is_colab():
+        print("Mounting Google Drive...")
+        drive = import_module("google.colab.drive")
+        drive.mount("/content/drive")
     
-    # Create a folder on drive to store all the code files
-    drive_folder = '/content/drive/MyDrive/colab/'
-    Path(drive_folder).mkdir(parents=True, exist_ok=True)
+        # Create a folder on drive to store all the code files
+        drive_folder = '/content/drive/MyDrive/colab/'
+        Path(drive_folder).mkdir(parents=True, exist_ok=True)
     
-    # Make a /colab path to easily access the folder
-    run(f'ln -s {drive_folder} /')
+        # Make a /colab path to easily access the folder
+        run(f'ln -s {drive_folder} /')
 
     print("Installing python libraries...")
     run("pip3 install --user flake8 black ipywidgets twine")

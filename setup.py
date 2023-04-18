@@ -2,9 +2,9 @@ from setuptools import setup, find_packages
 
 setup(
     name="colabtunnel",
-    version="0.0.4",
+    version="0.0.7",
     license="MIT",
-    description="Run code-server on Google Colab with persistence of settings and code.",
+    description="Connect to Google Colab VM locally from VSCode",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     classifiers=[
