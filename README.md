@@ -28,7 +28,7 @@ colabtunnel()
 <img width="516" alt="image" src="https://user-images.githubusercontent.com/8587189/232766772-effe800b-4184-42ac-b03d-4810ce072428.png">
 </p>
 
-3. Open your local VSCode editor and from the command prompt, select **Remote-Tunnels: Connect to Tunnel**
+3. Open your local VSCode Editor. Install the [Remote Tunnels](https://marketplace.visualstudio.com/items?itemName=ms-vscode.remote-server) extension if you haven't already installed. Then, open the command prompt and select **Remote-Tunnels: Connect to Tunnel**
 <p align="center">
 <img width="747" alt="image" src="https://user-images.githubusercontent.com/8587189/232767017-65ef61c4-99bc-48a1-be1d-88ad47b6d595.png">
 </p>
