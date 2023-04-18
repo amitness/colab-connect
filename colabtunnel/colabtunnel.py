@@ -1,6 +1,7 @@
 from pathlib import Path
 import subprocess
 from importlib import import_module
+import time
 
 message = """
 - Ready!
@@ -22,6 +23,8 @@ def start_tunnel() -> None:
         if "To grant access to the server" in line:
             print(line.strip())
         if "Open this link" in line:
+            print("Starting the tunnel")
+            time.sleep(5)
             print(message)
             print("Logs:")
             show_outputs = True
