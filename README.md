@@ -2,7 +2,7 @@
 
 # colab-tunnel
 
-Access Google Colab directly from your local VS Code editor.
+Access Google Colab directly from your local VS Code editor using [remote tunnels](https://code.visualstudio.com/docs/remote/tunnels).
 
 ## Usage
 You can make a copy of this [notebook](https://colab.research.google.com/drive/1VAlrgB4IpBazkQRrZtSPjeTNR3P27FwQ?usp=sharing) to get started.
@@ -23,8 +23,7 @@ colabtunnel()
 <img width="965" alt="image" src="https://user-images.githubusercontent.com/8587189/232768841-fbd2e1bd-91d1-49ac-989e-277e50604209.png">
 </p>
 
-
-2. Paste the give code on the link and press "Continue".
+2. Paste your unique code on the github link and press "Continue".
 <p align="center">
 <img width="516" alt="image" src="https://user-images.githubusercontent.com/8587189/232766772-effe800b-4184-42ac-b03d-4810ce072428.png">
 </p>
