@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="colabtunnel",
-    version="0.0.1",
+    version="0.0.4",
     license="MIT",
     description="Run code-server on Google Colab with persistence of settings and code.",
     long_description=open("README.md").read(),

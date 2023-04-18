@@ -1,7 +1,6 @@
+from pathlib import Path
 import subprocess
 from importlib import import_module
-import uuid
-import subprocess
 
 message = """
 - Ready!
@@ -42,9 +41,16 @@ def colabtunnel() -> None:
     print("Mounting Google Drive...")
     drive = import_module("google.colab.drive")
     drive.mount("/content/drive")
+    
+    # Create a folder on drive to store all the code files
+    drive_folder = '/content/drive/MyDrive/colab/'
+    Path(drive_folder).mkdir(parents=True, exist_ok=True)
+    
+    # Make a /colab path to easily access the folder
+    run(f'ln -s {drive_folder} /')
 
     print("Installing python libraries...")
-    run("pip3 install --user flake8 black ipywidgets")
+    run("pip3 install --user flake8 black ipywidgets twine")
     run("pip3 install -U ipykernel")
     run("sudo apt install htop -y")
 
