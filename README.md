@@ -14,7 +14,7 @@ You can make a copy of this [notebook](https://colab.research.google.com/drive/1
 
 On Google Colab, first install the library and the run the code.
 ```shell
-!pip install colabtunnel
+!pip install -U git+https://github.com/amitness/colab-tunnel.git
 ```
 
 ```python
