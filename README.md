@@ -1,6 +1,6 @@
 <img src="https://user-images.githubusercontent.com/8587189/232764837-40865915-1cef-40da-989b-f19773b15de1.png" align="right" width="75" height="75">
 
-# colab-tunnel
+# colab-connect
 
 Access Google Colab directly from your local VS Code editor using [remote tunnels](https://code.visualstudio.com/docs/remote/tunnels).
 
@@ -14,13 +14,13 @@ You can make a copy of this [notebook](https://colab.research.google.com/drive/1
 
 On Google Colab, first install the library and the run the code.
 ```shell
-!pip install -U git+https://github.com/amitness/colab-tunnel.git
+!pip install -U git+https://github.com/amitness/colab-connect.git
 ```
 
 ```python
-from colabtunnel import colabtunnel
+from colabconnect import colabconnect
 
-colabtunnel()
+colabconnect()
 ```
 
 1. After running the code, copy the given code, click the GitHub link and paste the code.

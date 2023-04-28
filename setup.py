@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="colabtunnel",
-    version="0.0.7",
+    name="colabconnect",
+    version="0.0.8",
     license="MIT",
     description="Connect to Google Colab VM locally from VSCode",
     long_description=open("README.md").read(),
@@ -17,6 +17,6 @@ setup(
     python_requires=">=3.7",
     author="Amit Chaudhary",
     author_email="meamitkc@gmail.com",
-    url="https://github.com/amitness/colab-tunnel",
+    url="https://github.com/amitness/colab-connect",
     packages=find_packages(),
 )

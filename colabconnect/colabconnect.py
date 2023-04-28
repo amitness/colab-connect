@@ -44,7 +44,7 @@ def run(command: str) -> None:
 def is_colab():
     return 'google.colab' in sys.modules
 
-def colabtunnel() -> None:
+def colabconnect() -> None:
     if is_colab():
         print("Mounting Google Drive...")
         drive = import_module("google.colab.drive")
