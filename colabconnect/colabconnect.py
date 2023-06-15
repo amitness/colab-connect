@@ -60,7 +60,7 @@ def colabconnect() -> None:
     print("Installing python libraries...")
     run("pip3 install --user flake8 black ipywidgets twine")
     run("pip3 install -U ipykernel")
-    run("sudo apt install htop -y")
+    run("apt install htop -y")
 
     print("Installing vscode-cli...")
     run(
