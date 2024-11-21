@@ -13,7 +13,7 @@ message = """
 
 
 def start_tunnel() -> None:
-    command = "./code tunnel --accept-server-license-terms --random-name"
+    command = "./code tunnel --accept-server-license-terms --name colab-connect"
     p = subprocess.Popen(
         command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT
     )
