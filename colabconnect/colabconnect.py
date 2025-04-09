@@ -7,13 +7,13 @@ import sys
 
 message = """
 - Ready!
-- Open VSCode on your laptop and open the command prompt
+- Open Cursor on your laptop and open the command prompt
 - Select: 'Remote-Tunnels: Connect to Tunnel' to connect to colab
 """.strip()
 
 
 def start_tunnel() -> None:
-    command = "./code tunnel --accept-server-license-terms --name colab-connect"
+    command = "./cursor tunnel --accept-server-license-terms --name colab-connect"
     p = subprocess.Popen(
         command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT
     )
@@ -62,11 +62,11 @@ def colabconnect() -> None:
     run("pip3 install -U ipykernel")
     run("apt install htop -y")
 
-    print("Installing vscode-cli...")
+    print("Installing cursor-cli...")
     run(
-        "curl -Lk https://code.visualstudio.com/sha/download?build=stable&os=cli-alpine-x64 --output vscode_cli.tar.gz"
+        "curl -Lk https://api2.cursor.sh/updates/download-latest?os=cli-alpine-x64 --output cursor_cli.tar.gz"
     )
-    run("tar -xf vscode_cli.tar.gz")
+    run("tar -xf cursor_cli.tar.gz")
 
     print("Starting the tunnel")
     start_tunnel()
