@@ -35,6 +35,17 @@ def start_tunnel() -> None:
             break
     return None
 
+def login_tunnel(provider: str) -> None:
+    command = f"./code tunnel user login --provider {provider}"
+    p = subprocess.Popen(
+        command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT
+    )
+    while True:
+        line = p.stdout.readline().decode("utf-8")
+        if line == "" and p.poll() is not None:
+            break
+        print(line.strip())
+    return None
 
 def run(command: str) -> None:
     process = subprocess.run(command.split())
@@ -44,7 +55,7 @@ def run(command: str) -> None:
 def is_colab():
     return 'google.colab' in sys.modules
 
-def colabconnect() -> None:
+def colabconnect(provider: str = "github") -> None:
     if is_colab():
         print("Mounting Google Drive...")
         drive = import_module("google.colab.drive")
@@ -69,4 +80,6 @@ def colabconnect() -> None:
     run("tar -xf cursor_cli.tar.gz")
 
     print("Starting the tunnel")
+    if provider != 'github':
+        login_tunnel(provider)
     start_tunnel()
